@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Makers Collective | Handmade, made with heart</title>
+<meta name="description" content="Handmade jewellery, crochet, paintings, accessories, crafts and home décor from independent Indian creators.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="nav" id="top">
+  <a href="#top" class="logo">The Makers <em>Collective</em></a>
+  <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">Menu</button>
+  <nav id="navLinks">
+    <a href="#shop">Shop</a>
+    <a href="#categories">Categories</a>
+    <a href="#creators">Creators</a>
+    <a href="#about">About</a>
+    <a href="#become" class="btn btn-small">Become a Creator</a>
+  </nav>
+  <button class="cart-btn" id="cartBtn" aria-label="Open cart">Cart <span id="cartCount">0</span></button>
+</header>
+
+<main>
+<section class="hero">
+  <div class="hero-text">
+    <h1>Discover Things Made with Heart</h1>
+    <p>Jewellery, crochet, paintings and home pieces from independent Indian makers. We handle the showcasing and selling, so they can keep making.</p>
+    <div class="hero-actions">
+      <a href="#shop" class="btn">Shop handmade</a>
+      <a href="#become" class="btn btn-ghost">Become a Creator</a>
+    </div>
+  </div>
+  <div class="hero-art" aria-hidden="true">
+    <div class="tile t1"><img src="images/pineapple-bracelet.jpg" alt="Pearl bracelet with a pineapple charm"></div>
+    <div class="tile t2"><img src="images/velvet-flower-clips-large.jpg" alt="Handmade velvet flower hair clips"></div>
+    <div class="tile t3"><img src="images/charm-crystal-bracelet.jpg" alt="Pearl bracelet with daisy and lollipop charms"></div>
+  </div>
+</section>
+
+<section class="section" id="categories">
+  <h2>Shop by category</h2>
+  <div class="cat-grid" id="catGrid"></div>
+</section>
+
+<section class="section alt" id="shop">
+  <div class="section-head">
+    <h2>Featured pieces</h2>
+    <div class="filters" id="filters" role="group" aria-label="Filter products"></div>
+  </div>
+  <div class="product-grid" id="productGrid"></div>
+</section>
+
+<section class="section" id="creators">
+  <h2>Meet the makers</h2>
+  <div class="creator-grid" id="creatorGrid"></div>
+</section>
+
+<section class="section sage" id="how">
+  <h2>How it works</h2>
+  <div class="steps">
+    <div class="step"><h3>Create</h3><p>You make what you love. Share your work and your story with our team.</p></div>
+    <div class="step"><h3>Showcase &amp; sell</h3><p>We photograph, list, market and sell your pieces, and handle customer questions.</p></div>
+    <div class="step"><h3>Earn</h3><p>You receive an agreed amount for every product, plus incentives based on terms we set together.</p></div>
+  </div>
+</section>
+
+<section class="section" id="voices">
+  <div class="voices">
+    <figure class="chat">
+      <img src="images/maker-chat.jpg" alt="Chat where a maker shares photos of her products and our team replies that we will be in touch" loading="lazy">
+      <figcaption>A real first conversation with a maker who joined us.</figcaption>
+    </figure>
+    <div>
+      <h2>Makers start with a simple hello</h2>
+      <p>Send us photos of what you make. Our team replies, gets to know your work and walks you through the terms, including your agreed price and any incentives. No forms to fight with and no upfront fees.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section alt" id="become">
+  <div class="form-wrap">
+    <div>
+      <h2>Become a Creator</h2>
+      <p>Tell us about your craft. Our team will review your details and get in touch within a few days to talk through terms.</p>
+    </div>
+    <form id="creatorForm" novalidate>
+      <label>Full name<input type="text" name="name" autocomplete="name"><small class="err"></small></label>
+      <label>Email<input type="email" name="email" autocomplete="email"><small class="err"></small></label>
+      <label>Phone (10 digits)<input type="tel" name="phone" autocomplete="tel"><small class="err"></small></label>
+      <label>What do you make?
+        <select name="craft"><option value="">Choose a craft</option></select><small class="err"></small>
+      </label>
+      <label>Tell us about your work<textarea name="about" rows="4"></textarea><small class="err"></small></label>
+      <button class="btn" type="submit">Send application</button>
+      <p class="success" id="formSuccess" role="status" hidden></p>
+    </form>
+  </div>
+</section>
+
+<section class="section" id="about">
+  <div class="about">
+    <h2>About us</h2>
+    <p>The Makers Collective began with a simple idea: talented makers should spend their time making. We take care of photography, listing, marketing and sales. Creators receive an agreed amount for each product and can earn extra incentives based on terms we agree together.</p>
+    <p>Every piece you see here is handmade in small batches by a real person.</p>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div><strong>The Makers Collective</strong><p>Handmade with heart.</p></div>
+  <div class="foot-links"><a href="#shop">Shop</a><a href="#creators">Creators</a><a href="#about">About</a><a href="#become">Become a Creator</a></div>
+  <small>© 2026 The Makers Collective. Prototype for demonstration.</small>
+</footer>
+
+<div class="overlay" id="overlay" hidden></div>
+<aside class="cart" id="cart" aria-label="Shopping cart" aria-hidden="true">
+  <div class="cart-head"><h3>Your cart</h3><button id="closeCart" aria-label="Close cart">Close</button></div>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="cart-foot">
+    <div class="total"><span>Total</span><strong id="cartTotal">₹0</strong></div>
+    <button class="btn" id="checkoutBtn">Checkout (demo)</button>
+    <button class="link-btn" id="clearCart">Clear cart</button>
+    <p class="success" id="cartMsg" role="status" hidden></p>
+  </div>
+</aside>
+<script src="script.js"></script>
+</body>
+</html>
